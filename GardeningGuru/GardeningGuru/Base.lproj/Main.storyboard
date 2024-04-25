@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -322,7 +323,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J7Y-b4-nk1">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="J7Y-b4-nk1">
                                 <rect key="frame" x="0.0" y="155" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -330,6 +331,89 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ghU-eJ-JQ1"/>
                                 </connections>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notification Alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgx-SN-y5A">
+                                <rect key="frame" x="16" y="220" width="217" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NLc-4q-HTl">
+                                <rect key="frame" x="16" y="272" width="361" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FUf-kz-fuj">
+                                    <size key="itemSize" width="325" height="120"/>
+                                    <size key="estimatedItemSize" width="325" height="120"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="rI7-yk-pVA" customClass="NotificationHomeCollectionViewCell" customModule="GardeningGuru" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jnw-z2-xAU">
+                                            <rect key="frame" x="0.0" y="0.0" width="325" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kk-lr-6gA">
+                                                    <rect key="frame" x="64" y="78" width="104" height="29"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Mark as Read">
+                                                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="0.0"/>
+                                                        <color key="baseBackgroundColor" red="0.33333334329999997" green="0.62745100259999997" blue="0.36078432199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnZ-OF-1nQ">
+                                                    <rect key="frame" x="63.666666666666657" y="15" width="35.333333333333343" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9r-kg-uw2">
+                                                    <rect key="frame" x="20.999999999999996" y="15" width="37.666666666666657" height="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7R-WD-acT">
+                                                    <rect key="frame" x="178" y="78" width="127" height="29"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Remind me Later ">
+                                                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="0.0"/>
+                                                        <color key="baseBackgroundColor" red="0.33333334329999997" green="0.62745100259999997" blue="0.36078432199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="a9r-kg-uw2" firstAttribute="leading" secondItem="jnw-z2-xAU" secondAttribute="leading" constant="21" id="3wB-uf-uz4"/>
+                                                <constraint firstItem="a9r-kg-uw2" firstAttribute="top" secondItem="jnw-z2-xAU" secondAttribute="top" constant="15" id="5mN-5v-89p"/>
+                                                <constraint firstAttribute="bottom" secondItem="X7R-WD-acT" secondAttribute="bottom" constant="13" id="8Oh-5k-Yqa"/>
+                                                <constraint firstItem="WnZ-OF-1nQ" firstAttribute="top" secondItem="jnw-z2-xAU" secondAttribute="top" constant="15" id="Bbg-uy-Pm0"/>
+                                                <constraint firstItem="X7R-WD-acT" firstAttribute="top" secondItem="jnw-z2-xAU" secondAttribute="top" constant="78" id="KEc-Nd-CdY"/>
+                                                <constraint firstAttribute="bottom" secondItem="8kk-lr-6gA" secondAttribute="bottom" constant="13" id="NSB-Lq-DLG"/>
+                                                <constraint firstAttribute="trailing" secondItem="X7R-WD-acT" secondAttribute="trailing" constant="20" id="Qv6-gr-9Np"/>
+                                                <constraint firstItem="8kk-lr-6gA" firstAttribute="top" secondItem="a9r-kg-uw2" secondAttribute="bottom" constant="46" id="f0y-90-uhQ"/>
+                                                <constraint firstItem="WnZ-OF-1nQ" firstAttribute="leading" secondItem="a9r-kg-uw2" secondAttribute="trailing" constant="5" id="n81-U2-g4J"/>
+                                                <constraint firstItem="8kk-lr-6gA" firstAttribute="top" secondItem="WnZ-OF-1nQ" secondAttribute="bottom" constant="43" id="s2R-jc-1GG"/>
+                                                <constraint firstItem="8kk-lr-6gA" firstAttribute="top" secondItem="WnZ-OF-1nQ" secondAttribute="bottom" constant="43" id="vci-Ag-QFh"/>
+                                                <constraint firstItem="X7R-WD-acT" firstAttribute="leading" secondItem="8kk-lr-6gA" secondAttribute="trailing" constant="10" id="vf5-2o-FZe"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.91372841599999999" green="0.91371983290000003" blue="0.91764730220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <size key="customSize" width="325" height="120"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="WnZ-OF-1nQ" id="QVg-x0-9mw"/>
+                                            <outlet property="frontLabel" destination="a9r-kg-uw2" id="RcU-c7-v3m"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Dpb-1k-h2q"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="q5k-Zs-k7f"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -338,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1825" y="739"/>
+            <point key="canvasLocation" x="-1825.1908396946565" y="738.73239436619724"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="94j-75-rUG">
@@ -736,7 +820,7 @@
                         <sections>
                             <tableViewSection id="R4p-3A-zt0">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="794" id="qdA-pq-8Pu" customClass="LoginTableViewCell" customModule="Create_an_account" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="794" id="qdA-pq-8Pu" customClass="LoginTableViewCell" customModule="GardeningGuru" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="794"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qdA-pq-8Pu" id="bnU-X6-nWE">
@@ -862,7 +946,7 @@
         <!--Reminder-->
         <scene sceneID="Ffw-9h-J1o">
             <objects>
-                <viewController id="qw0-1u-0gW" customClass="ReminderViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qw0-1u-0gW" customClass="ReminderViewController" customModule="GardeningGuru" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kue-O1-DmT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -922,7 +1006,7 @@
         <!--New Reminder-->
         <scene sceneID="CEb-3e-sh9">
             <objects>
-                <tableViewController id="0dk-za-fsu" customClass="NewReminderTableViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="0dk-za-fsu" customClass="NewReminderTableViewController" customModule="GardeningGuru" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="a45-M4-8G9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1078,7 +1162,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

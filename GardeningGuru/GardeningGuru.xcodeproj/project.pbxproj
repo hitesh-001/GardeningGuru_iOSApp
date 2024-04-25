@@ -18,6 +18,7 @@
 		966324032BDA6B800026C33D /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966324022BDA6B800026C33D /* LoginTableViewController.swift */; };
 		966324082BDA87DE0026C33D /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966324062BDA87DD0026C33D /* ReminderViewController.swift */; };
 		966324092BDA87DE0026C33D /* NewReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966324072BDA87DD0026C33D /* NewReminderTableViewController.swift */; };
+		9663240B2BDAC28D0026C33D /* NotificationHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9663240A2BDAC28D0026C33D /* NotificationHomeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		966324022BDA6B800026C33D /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		966324062BDA87DD0026C33D /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReminderViewController.swift; path = ../../../../Downloads/App/App/ReminderViewController.swift; sourceTree = "<group>"; };
 		966324072BDA87DD0026C33D /* NewReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewReminderTableViewController.swift; path = ../../../../Downloads/App/App/NewReminderTableViewController.swift; sourceTree = "<group>"; };
+		9663240A2BDAC28D0026C33D /* NotificationHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				966323EC2BDA28800026C33D /* SceneDelegate.swift */,
 				966323EE2BDA28800026C33D /* ViewController.swift */,
 				966323F02BDA28800026C33D /* Main.storyboard */,
+				9663240A2BDAC28D0026C33D /* NotificationHomeCollectionViewCell.swift */,
 				966324002BDA64CC0026C33D /* CaringCalendarViewController.swift */,
 				966324022BDA6B800026C33D /* LoginTableViewController.swift */,
 				966323FE2BDA54D30026C33D /* MyGardenViewController.swift */,
@@ -159,6 +162,7 @@
 				966323FF2BDA54D30026C33D /* MyGardenViewController.swift in Sources */,
 				966323EB2BDA28800026C33D /* AppDelegate.swift in Sources */,
 				966323ED2BDA28800026C33D /* SceneDelegate.swift in Sources */,
+				9663240B2BDAC28D0026C33D /* NotificationHomeCollectionViewCell.swift in Sources */,
 				966324092BDA87DE0026C33D /* NewReminderTableViewController.swift in Sources */,
 				966324032BDA6B800026C33D /* LoginTableViewController.swift in Sources */,
 			);
